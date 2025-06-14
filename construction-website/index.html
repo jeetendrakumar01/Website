@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildPro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">BuildPro</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#business">Our Businesses</a></li>
+                        <li><a href="#power">Power T&D</a></li>
+                        <li><a href="#buildings">Buildings & Factories</a></li>
+                        <li><a href="#water">Water</a></li>
+                        <li><a href="#railways">Railways</a></li>
+                        <li><a href="#urban">Urban Infrastructure</a></li>
+                        <li><a href="#oil">Oil & Gas</a></li>
+                        <li><a href="#manufacturing">Manufacturing Plants</a></li>
+                        <li><a href="#biomass">Biomass Plants</a></li>
+                    </ul>
+                </li>
+                <li><a href="sustainability.html">Sustainability</a></li>
+                <li><a href="csr.html">CSR</a></li>
+                <li><a href="investors.html">Investors</a></li>
+                <li><a href="news.html">News & Media</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Constructing Tomorrow's World</h1>
+            <p class="hero-subtitle">Innovative, Sustainable, and Timeless Construction Solutions</p>
+            <button class="btn-primary">Get a Quote</button>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About BuildPro</h2>
+        <p>We are a global leader in construction, delivering cutting-edge projects with a focus on sustainability and
+            innovation.</p>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3 class="stat-number" data-target="500">0</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number" data-target="25">0</h3>
+                <p>Years of Experience</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number" data-target="1000">0</h3>
+                <p>Skilled Professionals</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="business" class="projects-section">
+        <h2>Our Business Streams</h2>
+        <nav class="business-nav">
+            <ul>
+                <li><a href="#power" class="active">Power T&D</a></li>
+                <li><a href="#buildings">Buildings & Factories</a></li>
+                <li><a href="#water">Water</a></li>
+                <li><a href="#railways">Railways</a></li>
+                <li><a href="#urban">Urban Infrastructure</a></li>
+                <li><a href="#oil">Oil & Gas</a></li>
+                <li><a href="#manufacturing">Manufacturing Plants</a></li>
+                <li><a href="#biomass">Biomass Plants</a></li>
+            </ul>
+        </nav>
+        <div class="business-content">
+            <div id="power" class="business-detail active">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Power T&D"
+                    onerror="this.src='https://via.placeholder.com/600x400?text=Power+T&D'">
+                <h3>Power T&D</h3>
+                <p>Trusted expertise in design, engineering, and execution of large-scale T&D projects globally.</p>
+                <a href="#" class="btn-secondary">Know More</a>
+            </div>
+            <div id="buildings" class="business-detail">
+                <img src="https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3" alt="Buildings & Factories"
+                    onerror="this.src='https://via.placeholder.com/600x400?text=Buildings'">
+                <h3>Buildings & Factories</h3>
+                <p>Constructing sustainable commercial and industrial complexes with precision.</p>
+                <a href="#" class="btn-secondary">Know More</a>
+            </div>
+            <div id="water" class="business-detail">
+                <img src="https://images.unsplash.com/photo-1513366208864-87536b8bd7b4" alt="Water"
+                    onerror="this.src='https://via.placeholder.com/600x400?text=Water'">
+                <h3>Water</h3>
+                <p>Delivering water supply and irrigation solutions for sustainable management.</p>
+                <a href="#" class="btn-secondary">Know More</a>
+            </div>
+            <div id="railways" class="business-detail">
+                <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754" alt="Railways"
+                    onerror="this.src='https://via.placeholder.com/600x400?text=Railways'">
+                <h3>Railways</h3>
+                <p>Building advanced railway infrastructure for urban and regional connectivity.</p>
+                <a href="#" class="btn-secondary">Know More</a>
+            </div>
+            <div id="urban" class="business-detail">
+                <img src="https://images.unsplash.com/photo-1479839672679-a46483c59f46" alt="Urban Infrastructure"
+                    onerror="this.src='https://via.placeholder.com/600x400?text=Urban+Infra'">
+                <h3>Urban Infrastructure</h3>
+                <p>Innovative highways, airports, and urban projects for modern cities.</p>
+                <a href="#" class="btn-secondary">Know More</a>
+            </div>
+            <div id="oil" class="business-detail">
+                <img src="https://images.unsplash.com/photo-1508514177221-188b2747a09c" alt="Oil & Gas"
+                    onerror="this.src='https://via.placeholder.com/600x400?text=Oil+&+Gas'">
+                <h3>Oil & Gas</h3>
+                <p>Safe and efficient turnkey solutions for oil and gas pipelines.</p>
+                <a href="#" class="btn-secondary">Know More</a>
+            </div>
+            <div id="manufacturing" class="business-detail">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Manufacturing Plants"
+                    onerror="this.src='https://via.placeholder.com/600x400?text=Manufacturing'">
+                <h3>Manufacturing Plants</h3>
+                <p>Advanced technology integration for state-of-the-art manufacturing facilities.</p>
+                <a href="#" class="btn-secondary">Know More</a>
+            </div>
+            <div id="biomass" class="business-detail">
+                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276" alt="Biomass Plants"
+                    onerror="this.src='https://via.placeholder.com/600x400?text=Biomass'">
+                <h3>Biomass Plants</h3>
+                <p>Renewable energy solutions through specialized biomass energy plants.</p>
+                <a href="#" class="btn-secondary">Know More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" class="showcase-section">
+        <h2>Project Showcase</h2>
+        <div class="showcase-slider">
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Project 1"
+                    onerror="this.src='https://via.placeholder.com/800x500?text=Project+1'">
+                <div class="slide-caption">Sustainable Commercial Complex</div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd" alt="Project 2"
+                    onerror="this.src='https://via.placeholder.com/800x500?text=Project+2'">
+                <div class="slide-caption">High-Speed Railway</div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3" alt="Project 3"
+                    onerror="this.src='https://via.placeholder.com/800x500?text=Project+3'">
+                <div class="slide-caption">Industrial Factory</div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev-slide">←</button>
+            <button class="next-slide">→</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BuildPro Construction</h3>
+                <p>Leading construction company delivering innovative and sustainable building solutions worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Corporate Office: 123 Main St, City, Country</p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Email: info@buildpro.com</p>
+            </div>
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <a href="#" class="social-icon">in</a>
+                <a href="#" class="social-icon">yt</a>
+                <a href="#" class="social-icon">ig</a>
+                <a href="#" class="social-icon">fb</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 BuildPro Construction. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
