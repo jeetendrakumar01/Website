@@ -39,29 +39,26 @@ document.querySelectorAll('.nav-links > li').forEach(item => {
 });
 
 // Business streams tab switching
-const businessNav = document.querySelector('.business-nav');
-if (businessNav) {
-    const businessNavLinks = businessNav.querySelectorAll('ul li a');
-    const businessDetails = document.querySelectorAll('.business-detail');
+const businessNavLinks = document.querySelectorAll('.business-nav ul li a');
+const businessDetails = document.querySelectorAll('.business-detail');
 
-    businessNavLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
+businessNavLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
 
-            // Remove active class from all links and details
-            businessNavLinks.forEach(l => l.classList.remove('active'));
-            businessDetails.forEach(detail => detail.classList.remove('active'));
+        // Remove active class from all links and details
+        businessNavLinks.forEach(l => l.classList.remove('active'));
+        businessDetails.forEach(detail => detail.classList.remove('active'));
 
-            // Add active class to clicked link and corresponding detail
-            link.classList.add('active');
-            const targetDetail = document.getElementById(targetId);
-            if (targetDetail) {
-                targetDetail.classList.add('active');
-            }
-        });
+        // Add active class to clicked link and corresponding detail
+        link.classList.add('active');
+        const targetDetail = document.getElementById(targetId);
+        if (targetDetail) {
+            targetDetail.classList.add('active');
+        }
     });
-}
+});
 
 // Project showcase slider
 const slides = document.querySelectorAll('.slide');
@@ -69,13 +66,13 @@ const prevSlide = document.querySelector('.prev-slide');
 const nextSlide = document.querySelector('.next-slide');
 let currentSlide = 0;
 
-if (slides.length > 0 && prevSlide && nextSlide) {
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-        });
-    }
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+}
 
+if (nextSlide && prevSlide) {
     nextSlide.addEventListener('click', () => {
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
@@ -158,56 +155,14 @@ document.querySelectorAll('.stat-number').forEach(stat => {
 });
 
 // Slider animation
-gsap.from(".slide", {
-    opacity: 0,
-    x: 100,
-    duration: 1,
-    stagger: 0.2,
-    scrollTrigger: {
-        trigger: ".showcase-slider",
-        start: "top 80%",
-        toggleActions: "play none none none"
-    }
-});
-
-// Content section animation (for CSR, Investors, etc.)
-document.querySelectorAll('.content-section').forEach(section => {
-    gsap.from(section, {
+document.querySelectorAll('.slide').forEach(slide => {
+    gsap.from(slide, {
         opacity: 0,
-        y: 50,
+        x: 100,
         duration: 1,
         scrollTrigger: {
-            trigger: section,
+            trigger: slide,
             start: "top 80%",
-            toggleActions: "play none none none"
-        }
-    });
-});
-
-// Content card animations
-document.querySelectorAll('.content-card').forEach(card => {
-    gsap.from(card, {
-        opacity: 0,
-        scale: 0.95,
-        duration: 0.8,
-        ease: "back.out(1.7)",
-        scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-            toggleActions: "play none none none"
-        }
-    });
-});
-
-// Contact form and info animations
-document.querySelectorAll('.contact-form-container, .contact-info').forEach(element => {
-    gsap.from(element, {
-        opacity: 0,
-        x: (index) => (index % 2 === 0 ? -50 : 50),
-        duration: 1,
-        scrollTrigger: {
-            trigger: element,
-            start: "top 85%",
             toggleActions: "play none none none"
         }
     });
